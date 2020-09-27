@@ -123,7 +123,8 @@ def main(stdscr):
                 num_width = width // 8
                 scale = num_width / 6
                 stdscr.clear()
-            time.sleep(1)
+            wait_time = 1.0 - datetime.now().microsecond / 1000000.0
+            time.sleep(wait_time)
     except KeyboardInterrupt:
         pass
 
